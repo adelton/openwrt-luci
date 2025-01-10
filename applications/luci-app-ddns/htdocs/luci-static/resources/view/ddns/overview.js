@@ -851,7 +851,7 @@ return view.extend({
 					o.modalonly = true;
 					o.depends("ip_source", "interface")
 					o.multiple = false;
-					o.default = 'wan';
+					o.default = '@wan';
 
 					o = s.taboption('advanced', form.Value, 'ip_script',
 						_("Script"),
