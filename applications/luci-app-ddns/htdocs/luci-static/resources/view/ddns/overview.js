@@ -832,7 +832,7 @@ return view.extend({
 						_("Defines the network to read systems IP-Address from"));
 					o.depends('ip_source','network');
 					o.modalonly = true;
-					o.default = 'wan';
+					o.default = ipv6 == "1" ? 'wan6' : 'wan';
 					o.multiple = false;
 
 					o = s.taboption('advanced', form.Value, 'ip_url',
@@ -851,7 +851,7 @@ return view.extend({
 					o.modalonly = true;
 					o.depends("ip_source", "interface")
 					o.multiple = false;
-					o.default = '@wan';
+					o.default = ipv6 == "1" ? '@wan6' : '@wan';
 
 					o = s.taboption('advanced', form.Value, 'ip_script',
 						_("Script"),
